@@ -1,0 +1,291 @@
+
+<html>
+<head>
+	<title>My Book</title>
+</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<body bgcolor="blue sky">
+    <style>
+        body {
+            background-color: rgb(0,0,0);
+            color: blue;
+            font: normal 5px;
+            margin: 5px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline;
+            margin-right: 5px;
+        }
+    </style><h2>Menu</h2>
+    <p>
+<ol style="margin-top: 55px;"><li style="text-align: center; font-size: 20; font-family: times new roman;">
+    <a href="home.html" style="padding: 10px; color: white; background-color: blue; text-decoration: none; margin-right: 15px;">HOME</a>
+    <a href="about.html" style="padding: 10px; color: white; background-color: blue; text-decoration: none; margin-right: 15px;">ABOUT US</a>
+    <a href="contact.html" style="padding: 10px; color: white; background-color: blue; text-decoration: none; margin-right: 15px;">CONTACT</a>
+    <a href="services.html" style="padding: 10px; color: white; background-color: blue; text-decoration: none; margin-right: 15px;">SERVICES</a>
+    <a href="form.html" style="padding: 10px; color: white; background-color: blue; text-decoration: none; margin-right: 15px;">FORM</a>
+    <a href="table.html" style="padding: 10px; color: white; background-color: blue; text-decoration: none; margin-right: 15px;">TABLE</a>
+    <a href="mybook.html" style="padding: 10px; color: white; background-color: blue; text-decoration: none; margin-right: 15px;">MY BOOK
+    </a></li>
+</ol>
+	</p>
+	<marquee><h3><b>ONLINE EXAMINATION MANAGEMENT SYSTEM</b></h3></marquee>
+    <h1><center>DATABASE AND JAVA WITH ONLINE EXAMINATION MANAGEMENT SYSTEM</center></h1>
+	<ol><h2><u><li>I. DATABASE</li></u></h2>
+         
+		<p>Database name used: <b>online examination Management System</b></p>
+		<ul type="square"><h3><u><i><li>Tables</li></i></u></h3>
+
+			<ol><li><b><h1>Admin Table</h1></b></li>
+
+			<p> As we have described in above page login form will direct as on this admin page
+For admin to continue his/her tasks he will need to login using created and allowed username and password otherwise no access will be given
+.</p>
+            <U><b>  Admin table has the following attributes</b></U>
+            <p><b><i>Admin database table</i></b></br>
+<img src="admin db.png" width=500 height=100><br>
+            </p>
+       Id (primary key)...................................: Id for the admin
+      <br>first_mame (varchar)............................: Firstname for admin
+      <br>last_name (varchar)..............................: Lastname for admin
+      <br>email (varchar)......................................: Email of admin
+      <br>telephone (int).......................................: Telephone number of admin</br>
+
+			<li><b><h1>User Table</h1></b></li>
+
+			<p> This is table is table that will be only created by admin and will hold other system users apart from admin it will give them email and password that they will user to login.
+ Note: the created user will not have same ability and right in the system
+ </p> </br>
+                        <U><b>  user table has the following attributes</b></U>
+            <p><b><i>User database table</i></b></br>
+<img src="user db.png" width=600 height=100><br>
+     <br>Id (primary key)......................................:Id for the user
+     <br>first_mame (varchar)...............................:First name for user
+     <br>last_name (varchar).................................:Last name for user   
+     <br>age (int)...................................................:Age of user
+     <br>address (varchar).....................................:Address for user
+     <br>email (varchar).........................................:Email of user
+     <br>agent_id  (foreign key)..............................:Id of agent  </br>                     
+			<li><b><h1>course Table</h1></b></li>
+
+			<p>This table to contain all course which will done by student in the examination and will be created by system admin and few allowed user depending on user type..</p></br>
+                        <U><b>  course table has the following attributes</b></U>
+            <p><b><i>course database table</i></b></br>
+<img src="course db.png" width=400 height=100><br>
+<br>course-Id (primary key)....................................: Id for the course                                             
+<br>course_name (varchar)..............................:  name of the course    
+<br>teacher-id (foreign key)...............................: id oftheteacher </br>                                                                         
+<li><b><h1>assignment Table</h1></b></li>
+
+			<p>This table contain all work or assignment created by admin and admin give permission all students to get that work easily in the short time. And this contain name of assignment, title, id of course and time of submission of that assignment.  .</p>
+<p> <U><b>  assignment table has the following attributes</b></U></p>
+<p><b><i>Assignment database table</i></b></br>
+<img src="assignment db.png" width=500 height=80><br>
+    <br>assignment-Id (primary key)...................................: Id for the assignment
+    <br>assignment_mame (varchar)............................: name of assignment
+    <br>course-id (foreign key)..............................: id of course
+    <br>assignment-title (varchar).....................................: title of assignment
+    <br>deadline (varchar)......................................: Time of submission      
+    <br>maximum-score (int)...........................: marks of assignment            
+    </br>
+
+            <li><b><h1>exam Table</h1></b></li>
+
+			<p> This table contain all exam prepared by admin for all student .name of that exam, id of that, time of starting exam and time of finishing it. Admin will provide username and password for candidates so that they can login and start exam.</p>
+                       <p> <U><b>  exam table has the following attributes</b></U></p>
+<p><b><i>exam database table</i></b></br>
+<img src="exam db.png" width=350 height=110><br>
+      <br>exam-Id (primary key)......................................: Id for the exam
+      <br>exam-name (foreign key)..................................: name of exam
+      <br>course-id (foreign key)............................:  id of course
+      <br>start-time(varchar).................................:time of starting exam
+      <br>end-time(varchar).....................................:time of finishing exam
+      <br>exam-title(varchar).....................................:title of exam </br>                 
+            <li><b><h1>enrollment Table</h1></b></li>
+            <p> This table contain id of student enrolled, id of that user and course id of that lesson. This keeps tracks of which classes each students is enrolled in and links the class id and students id. .</p>
+            <p> <U><b>  enrollment table has the following attributes</b></U></p>
+<p><b><i>enrollment database table</i></b></br>
+<img src="enrollment db.png" width=350 height=110><br>
+
+    <br>enrollment-id (primary key)......................................: Id for the enrolled 
+    <br>user-id (foreign key)............................................: id of the user
+    <br>course-id (foreign key)...........................: id of the course</br> 
+    <li><b><h1>submission Table</h1></b></li>
+            <p>This table contain id of submitted, id of submitter, id of that thing submitted, time of submission and marks of that things.  For this students are allowed to submit what he/she done and allowed to get marks of that. </p>                      
+<p><b><i>submission database table</i></b></br>
+<img src="submissiom db.png" width=350 height=110><br>
+
+    <br>submission-id (primary key)......................................: Id for the submission
+    <br>user-id (foreign key)............................................: id of the user
+    <br>assignment-id (foreign key)...........................: id of the assignment
+<br>submission-time(varchar).............................................:time of submission
+<br>score(int)............................................................:marks of course submitted</br>
+ <li><b><h1>grade Table</h1></b></li>
+            <p> This table contain id of grade, user id, assignment id and exam id. For this student allowed to get grade of what he/she submit.</p>                      
+<p><b><i>grade database table</i></b></br>
+<img src="grade db.png" width=350 height=110><br>
+
+    <br>grade-id (primary key)......................................: Id for the grade
+    <br>user-id (foreign key)............................................: id of the user
+    <br>assignment-id (foreign key)...........................: id of the assignment
+<br>exam-time(foreign key).............................................:time of exam
+</br>
+    <p><b><i><u><h1> An LDM of this system entities (Tables)</h1></u></i></b></br>
+<img src="LDM.png" width=800 height=500><br>
+
+<p><b><i><u><h1> An ERD of this system entities (Tables)</h1></u></i></b></br>
+<img src="ERD.jpg" width=800 height=500><br>
+
+<P><B><U><h1>CREATION OF VIEW TO INSERT DATA INTO THE TABLES</U></B></P></h1>
+<P><b>   CREATE VIEW admin_view AS</b></P></p>
+-> SELECT * FROM admin
+<br>-> WHERE admin_id =3;
+<p><b>   CREATE VIEW user_view AS</b></p>
+-> SELECT * FROM user
+<br>-> WHERE user_id =5;
+<p><b>   CREATE VIEW course_view AS</b></p>
+-> SELECT * FROM course
+<br>-> WHERE course_id = 2;
+<p><b>   CREATE VIEW assignment_view AS</b></p>
+ -> SELECT * FROM assignment
+ <br>-> WHERE assignment_id =4;</P></br>
+ <img src="assig view.png" width=550 height=150><br>
+ <p><b>  CREATE VIEW exam _view AS</b></p>
+-> SELECT * FROM exam</br>
+<img src="exam vw.png" width=550 height=150><br>
+<p><b>   CREATE VIEW enrollment_view AS</b></p>
+-> SELECT * FROM enrollment</b>
+<br>-> WHERE enrollment_id =5;</b></br>
+<img src="enrollment vw.png" width=550 height=150><br>
+
+     <h1><center>ONLINE EXAMINATION MANAGEMENT SYSTEM</center></h1>
+    <h2><u><li>II. JAVA</li></u></h2> 
+            <li><b><h1> II.1. Introduction</h1></b></li>
+
+<p><h2>
+In this chapter I will be describing how powerful general purpose programming language was used to create the analyzed system. Under this chapter I will undergo full detail of how everything will function together with database that have been describe above and how it cope with full analyzed system.
+</h2></p></br>
+
+            <li><b><h1>II.2.Tools used to develop this system in java programming</h1></b></li>
+
+            <p><b><u>    Eclipse IDE : </b></u>
+An integrated development environment used in computer programming. It contains a base workspace and an extensible plug-in system for customizing the environment. It is the second-most-popular IDE for Java development, and, until 2016, was the most popular. </p> </br>
+<p><b><U>   JAR stands for Java Archive :</b></U>
+It's a file format based on the popular ZIP file format and is used for aggregating many files into one. Although JAR can be used as a general archiving tool, the primary motivation for its development was so that Java applets and their requisite components.</p></br>
+<img src="jre.png" width=550 height=150><br></br>
+
+
+            <li><b><u>    MySQL Connectors</u></b></li>
+<p>MySQL provides standards-based drivers for JDBC, ODBC, and Net enabling developers to build database applications in their language.</p>
+
+            <li><b><h1>II.3. Forms description</h1></b></li>
+
+           <b> So let look together how this system will function one by one from the beginning up to the end </b>
+
+            <p><b><u>1.   USER LOGIN :</u></b></br><br>
+This the first page of the system where system will choose destination depending on the function he/she possess in this government revenue management system
+</p>
+<img src="login.png" width=350 height=300><br>
+
+            <b>  Login Button</b>
+            <p><b><u>Login Button:</u></b> This button is dedicated for system admin to login so that he/she can do more in       the system, like adding viewing different entities of this system by doing different modification.</p></br>
+
+            <li><b>  Forgot password</b></li>
+            <p><b><u>Forgot password:</u></b> This button will facilitate the user who forgot the password this button will facilitate the user to request administrator to reset. </p></br>
+            <img src="frgt.png" width=350 height=300><br>
+
+    <li><b> Create New Account</b></li>
+    <p><b><u>Create New Account:</u></b>  individual user can register on through the use of create new account button that will direct the user form to fill his/her information as required by the system </p></br>
+    <img src="snp.png" width=450 height=300><br><br>
+
+             <p><b><u>2.  ADMIN LOGIN </u></b></br>
+
+                <p><b>As we have described in above page login form will direct as on this admin login page. A designated Administrator in this system manages user access of all participant of the system including users, agent, managers oversees financial transactions, and ensures revenue management and data integrity.</p></br>
+
+                <img src="admn.png" width=450 height=300><br><br>
+                <b> So the after admin inserting email and password its will direct into admin dashboard</b><br>
+                 <img src="admnsucc.png" width=450 height=300><br><br>
+
+            <b>  Admin dashboard after login</b>
+            <p>With this page we will be show the different tasks like modifying information being inserted by different entities like user, agent who exist or not exist in the system or who do not have knowledge to use the system.</p>
+            <img src="dfdf.png" width=450 height=300><br>
+
+          <p><b>So for this system after admin log in his/her account in dashboard can access to different entities of the system that are described below;</p>
+                          <h1><u><i><li><center>Forms and Images</center></li></i></u></h1>
+
+<b>1.  USER Form</b>
+<p><b>Under this page the system admin will add, delete, or even update user table in the system using generated information addition on that admin can view list of all registered user whether those who are registered by admin, other system allowed users or these registered by user on their own </p>
+<img src="dfghjdfhj.png" width=450 height=300><br>
+
+<b>2. SUBMISSION Form</b>
+<p><b>
+Under this page the system admin will add, delete, or even update submission table in the system using generated information addition on that admin can view list of all exam had been submitted whether those who are registered by admin, other system allowed users by submission on their own
+</p>
+<img src="dfhfh.png" width=450 height=300><br>
+
+<b>3. GRADE form</b>
+<p><b>
+Under this page the system admin will add, delete, or even update grade table in the system using generated information addition on that admin can view list of all marks of students whether those who are registered by admin, other system allowed users or these registered by grade on their own
+ </p>
+ <img src="bbbbbbb.png" width=450 height=300><br>
+
+<b>4.    EXAM Form</b>
+<p><b>
+Under this page the system admin will add, delete, or even update exam table in the system using generated information addition on that admin can view list of all registered exam whether those who are registered by admin, other system allowed users or these registered by exam on their own
+ </p>
+ <img src="fdhdf.png" width=450 height=300><br>
+
+<b>5.    ENROLLMENT Form</b>
+<p><b>
+Under this page the system admin will add, delete, or even update enrollment table in the system using generated information addition on that admin can view list of all registered enrollment whether those who are registered by admin, other system allowed users or these registered by enrollment on their own
+ </p>
+ <img src="dfbdfh.png" width=450 height=300><br>
+<p><b><u><h1>  LOGOUT </h1></b></u>
+Administrator can securely log out to end their session, ensuring data privacy and system security. Upon logout, the system clears admin credentials, terminates active sessions, and redirects to the login page, maintaining the integrity and confidentiality of government revenue data. </p>
+       <img src="logout.png" width=450 height=300>
+
+<p> And then apart from admin login the user of this system have directing for user login and access different user related entities of the system as shown bellows;</p>
+          
+           <p><b><u>3.  USER LOGIN FORM </u></b></br>
+            
+<p><b>
+This the page on which new created user will use given email and password that are recorded in database called in table called admin to login so that he/she can access the system features he/she is allowed to.
+Under this user has own login form so as to access and make the transactions of revenue as follows
+
+ </p>
+ <img src="fhgsdagj.png" width=450 height=300><br>
+
+ 
+<p><b>
+The dashboard provides a comprehensive view of revenue and transactions. Users can monitor their transactions of revenues, read revenue from database, and access detailed transaction records.
+ </p>
+ <img src="xbsxbx.png" width=450 height=300><br 
+ <b>>   Revenue</b><br>
+<img src="dsfsf.png" width=450 height=300><br>
+
+<b>>   COURSE FORM</b><br>
+ <p><b>
+Under this page the system admin will add, delete, or even update course table in the system using generated information addition on that admin can view list of all registered course whether those who are registered by admin, other system allowed users or these registered by course on their own
+ </p>
+ <img src="dbfdb.png" width=450 height=300><br>
+
+<li><b><h1>II.4. Conclusion</h1></b></li>
+
+                <p><b>Concluding this chapter concerns with java programming especially in my developing this system, several key achievements have been realized and works. Firstly, the implementation of this system has greatly enhanced the efficiency and accuracy of revenue collection and tracking processes, resulting in improved financial transparency and accountability of government revenue management system.</p></br>
+ 
+
+		
+		<ul type="square"><h3><u><i><li>Description</li></i></u></h3>
+			              <h3><u><i><li>Forms and Images</li></i></u></h3>
+        </ul>
+		
+	</ol>
+	<marquee><u><i><h2 style="color: white;">Prepared By</i></u>:   <b>leontine niyisubiza</b> </h2></marquee>
+	</body>
+	</html>
